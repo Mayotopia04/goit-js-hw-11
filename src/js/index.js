@@ -75,6 +75,7 @@ function renderGallery(hits) {
     //End of collection
     if (options.params.page * options.params.per_page >= totalHits) {
         if (!reachedEnd) {
+            document.querySelector('.loader').classList.remove('loader');
             Notify.info("We're sorry, but you've reached the end of search results.");
             reachedEnd = true;
         }
